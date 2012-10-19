@@ -35,4 +35,11 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
+
+gem 'oauth'
+gem 'oauth-plugin'
+gem 'devise'
+group :development, :test do
+  gem 'rspec-rails'
+end

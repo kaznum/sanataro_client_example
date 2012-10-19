@@ -1,4 +1,16 @@
 SanataroClientExample::Application.routes.draw do
+  resources :entries
+  
+  resources :oauth_consumers do
+    member do
+      get :callback
+      get :callback2
+      match 'client/*endpoint' => 'oauth_consumers#client'
+    end
+  end
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +60,7 @@ SanataroClientExample::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'entries#index'
 
   # See how all your routes lay out with "rake routes"
 
