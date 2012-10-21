@@ -43,3 +43,5 @@ gem 'devise'
 group :development, :test do
   gem 'rspec-rails'
 end
+
+gem 'twitter-bootstrap-rails'
