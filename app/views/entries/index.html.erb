@@ -1,8 +1,0 @@
-<% if current_user.sanataro %>
-  <% ActiveSupport::JSON.decode(current_user.sanataro.client.get('/api/entries.json').response.body)["entries"].each do |e| %>
-    <%= e.to_s %><br>
-  <% end %>
-<% else %>
-  link_to 'You have to authenticate.', oauth_consumer_path("sanataro")
-<% end %>
-
