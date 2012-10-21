@@ -1,6 +1,15 @@
 - if current_user.sanataro
-  - ActiveSupport::JSON.decode(current_user.sanataro.client.get('/api/entries.json').response.body)["entries"].each do |e|
-    = e.to_s
-    %br
+  %table
+    - @entries.each do |e|
+      %tr
+        %td= e.id
+        %td= e.action_date
+        %td= e.confirmation_required?
+        %td= e.name
+        %td= @accounts.find{|a| a.id == e.from_account_id}.try(:name) || "(不明)"
+        %td= @accounts.find{|a| a.id == e.to_account_id}.try(:name) || "(不明)"
+        %td= e.amount
 - else
   = link_to 'You have to authenticate.', oauth_consumer_path("sanataro")
+
+
