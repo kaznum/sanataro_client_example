@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/kaznum/ember-rails.git
+  revision: 08c95713f1b1c619e33d355ffd0d827fcda274e1
+  branch: jquery18
+  specs:
+    ember-rails (0.7.0)
+      active_model_serializers
+      execjs (>= 1.2)
+      railties (~> 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -14,6 +24,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.3)
+    active_model_serializers (0.5.2)
+      activemodel (~> 3.0)
     activemodel (3.2.8)
       activesupport (= 3.2.8)
       builder (~> 3.0.0)
@@ -175,6 +187,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   devise
+  ember-rails!
   haml-rails
   jquery-rails
   oauth

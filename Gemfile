@@ -46,3 +46,5 @@ end
 
 gem 'twitter-bootstrap-rails'
 gem 'haml-rails'
+gem 'ember-rails', git: 'git://github.com/kaznum/ember-rails.git', branch: 'jquery18'
+
